@@ -22,12 +22,12 @@ class task{
 	static TimerTask task = new TimerTask() {
     public void run() {
     	try { 
-            Thread.sleep(120); 
             Robot r = new Robot(); 
-  
+            Thread.sleep(120); 
+
             // It saves screenshot to desired path 
-            String path = "C:\\Users\\example\\Desktop\\screenshot\\scs_"; 
-            String path2 = "C:\\Users\\example\\Desktop\\screenshot";
+            String path = "C:\\Users\\Jaehyun Choi\\Desktop\\screenshot\\scs_"; 
+            String path2 = "C:\\Users\\Jaehyun Choi\\Desktop\\screenshot";
             //디렉토리가 없을 경우 생성할 path2
             
             // Used to get ScreenSize and capture image 
@@ -58,6 +58,10 @@ class task{
 
             ImageIO.write(Image, "jpg", new File(path)); //스크린샷 생성
             System.out.println("Screenshot saved");
+				/*
+				 * File f = new File(path); 
+				 * f.delete();
+				 */ // 파일 삭제 코드
             
         } 
         catch (AWTException | IOException | InterruptedException ex) { 
